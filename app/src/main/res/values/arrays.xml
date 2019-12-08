@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="major">
+        <item>그리핀도르</item>
+        <item>래번클로</item>
+        <item>슬리데린</item>
+        <item>후플푸프</item>
+    </string-array>
+</resources>
