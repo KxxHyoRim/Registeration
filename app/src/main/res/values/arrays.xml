@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="major">
-        <item>그리핀도르</item>
-        <item>래번클로</item>
-        <item>슬리데린</item>
-        <item>후플푸프</item>
+        <item>전자공학과</item>
+        <item>전자통신공학과</item>
+        <item>컴퓨터공학과</item>
+        <item>소프트웨어학부</item>
+        <item>경영학부</item>
+        <item>나노전자물리학과</item>
+    </string-array>
+    <string-array name="year">
+        <item>2016학년도</item>
+        <item>2017학년도</item>
+        <item>2018학년도</item>
+        <item>2019학년도</item>
+        <item>2020학년도</item>
+        <item>2021학년도</item>
+        <item>2022학년도</item>
+        <item>2023학년도</item>
+    </string-array>
+    <string-array name="term">
+        <item>1학기</item>
+        <item>여름학기</item>
+        <item>2학기</item>
+        <item>겨울학기</item>
+    </string-array>
+    <string-array name="graduateArea">
+        <item>일반대학원</item>
+    </string-array>
+    <string-array name="universityArea">
+        <item>교양및기타</item>
+        <item>전공</item>
+    </string-array>
+    <string-array name="graduateMajor">//학과 정보
+        <item>전자공학과</item>
+        <item>전자통신공학과</item>
+        <item>컴퓨터공학과</item>
+        <item>소프트웨어학부</item>
+        <item>경영학부</item>
+        <item>나노전자물리학과</item>
+    </string-array>
+    <string-array name="universityRefinementMajor">//교양
+        <item>전자공학과</item>
+        <item>전자통신공학과</item>
+        <item>컴퓨터공학과</item>
+        <item>소프트웨어학부</item>
+        <item>경영학부</item>
+        <item>나노전자물리학과</item>
+    </string-array>
+    <string-array name="universityMajor">//모든 학부생들의 학과 정보
+        <item>전자공학과</item>
+        <item>전자통신공학과</item>
+        <item>컴퓨터공학과</item>
+        <item>소프트웨어학부</item>
+        <item>경영학부</item>
+        <item>나노전자물리학과</item>
     </string-array>
 </resources>

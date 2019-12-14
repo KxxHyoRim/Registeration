@@ -68,7 +68,7 @@
                 android:orientation="vertical"
                 android:background="@color/colorPrimary"
                 android:layout_marginTop="8dp">
-            <ImageButton
+            <ImageView
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:layout_gravity="center"
