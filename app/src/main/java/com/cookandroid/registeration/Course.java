@@ -15,6 +15,7 @@ public class Course {
     String courseProfessor;//강의 교수
     String courseTime;//강의 시간대
     String courseRoom;//강의실
+    int courseRival;//강의 경쟁자 수
 
 
     public int getCourseID() {
@@ -129,6 +130,34 @@ public class Course {
         this.courseRoom = courseRoom;
     }
 
+    public Course(int courseID, String courseGrade, String courseTitle, int courseDivide, int coursePersonnel, int courseRival) {
+        this.courseID = courseID;
+        this.courseGrade = courseGrade;
+        this.courseTitle = courseTitle;
+        this.courseDivide = courseDivide;
+        this.coursePersonnel = coursePersonnel;
+        this.courseRival = courseRival;
+
+    }
+
+    public Course(int courseID, String courseGrade, String courseTitle, int courseDivide, int coursePersonnel, int courseRival, int courseCredit) {
+        this.courseID = courseID;
+        this.courseGrade = courseGrade;
+        this.courseTitle = courseTitle;
+        this.courseDivide = courseDivide;
+        this.coursePersonnel = coursePersonnel;
+        this.courseRival = courseRival;
+        this.courseCredit=courseCredit;
+    }
+
+    public int getCourseRival() {
+        return courseRival;
+    }
+
+    public void setCourseRival(int courseRival) {
+        this.courseRival = courseRival;
+    }
+
     public Course(int courseID, String courseUniversity, int courseYear, String courseTerm, String courseArea, String courseMajor, String courseGrade, String courseTitle, int courseCredit, int courseDivide, int coursePersonnel, String courseProfessor, String courseTime, String courseRoom) {
         this.courseID = courseID;
         this.courseUniversity = courseUniversity;
@@ -144,5 +173,6 @@ public class Course {
         this.courseProfessor = courseProfessor;
         this.courseTime = courseTime;
         this.courseRoom = courseRoom;
+
     }
 }

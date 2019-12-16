@@ -5,4 +5,7 @@
     <color name="colorAccent">#BF4456</color>
     <color name="colorWarning">#CC3D3D</color>
     <color name="colorGray">#8C8C8C</color>
+    <color name="colorDanger">#008299</color>
+    <color name="colorRed">#FF1212</color>
+    <color name="colorSafe">#1DDb16</color>
 </resources>

@@ -42,6 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
         int genderGroupID=genderGroup.getCheckedRadioButtonId();//현재 genderGroup이 체크되어있는 id값
         userGender=((RadioButton)findViewById(genderGroupID)).getText().toString();
 
+        //라디오 버튼이 눌리면 값이 바뀌는 부분
         genderGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int i) {
@@ -50,14 +51,16 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
+        //회원가입시 아이디 사용가능여부 검증
         final Button validateButton=(Button)findViewById(R.id.validateButton);
         validateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String userID=idText.getText().toString();
-                if(validate){
+                if(validate){//검증 완료
                     return;
                 }
+                //ID입력 안했다면
                 if(userID.equals(""))
                 {
                     AlertDialog.Builder builder=new AlertDialog.Builder(RegisterActivity.this);
@@ -67,6 +70,7 @@ public class RegisterActivity extends AppCompatActivity {
                     dialog.show();
                     return;
                 }
+                //검증
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
