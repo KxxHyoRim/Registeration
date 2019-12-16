@@ -130,6 +130,17 @@ public class Course {
         this.courseRoom = courseRoom;
     }
 
+    public Course(int courseID, String courseGrade, String courseTitle, int courseCredit, int courseDivide, int coursePersonnel, String courseProfessor, String courseTime) {
+        this.courseID = courseID;
+        this.courseGrade = courseGrade;
+        this.courseTitle = courseTitle;
+        this.courseCredit = courseCredit;
+        this.courseDivide = courseDivide;
+        this.coursePersonnel = coursePersonnel;
+        this.courseProfessor = courseProfessor;
+        this.courseTime = courseTime;
+    }
+
     public Course(int courseID, String courseGrade, String courseTitle, int courseDivide, int coursePersonnel, int courseRival) {
         this.courseID = courseID;
         this.courseGrade = courseGrade;
