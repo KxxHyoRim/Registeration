@@ -48,14 +48,7 @@
                 android:textColorHint="#FFFFFF"
                 android:textStyle="bold"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1분반"
-                android:id="@+id/courseDivide"
-                android:layout_gravity="center"
-                android:padding="3dp"
-                android:textColor="#FFFFFF"/>
+
 
         </LinearLayout>
 
@@ -64,6 +57,15 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:background="#FFFFFF">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1분반"
+                android:id="@+id/courseDivide"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:textColor="@color/colorPrimaryDark"/>
 
             <TextView
                 android:layout_width="wrap_content"

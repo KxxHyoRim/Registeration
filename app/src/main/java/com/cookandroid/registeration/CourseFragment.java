@@ -114,9 +114,11 @@ public class CourseFragment extends Fragment {//Fragment 특정한 화면 안에
 
                 yearAdapter=ArrayAdapter.createFromResource(getActivity(),R.array.year, android.R.layout.simple_spinner_dropdown_item);
                 yearSpinner.setAdapter(yearAdapter);
+                yearSpinner.setSelection(4);
 
                 termAdapter=ArrayAdapter.createFromResource(getActivity(),R.array.term, android.R.layout.simple_spinner_dropdown_item);
                 termSpinner.setAdapter(termAdapter);
+                termSpinner.setSelection(3);
 
                 if(courseUniversity.equals("학부"))
                 {
