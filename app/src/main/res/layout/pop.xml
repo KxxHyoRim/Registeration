@@ -83,7 +83,7 @@
         <TextView
             android:drawableStart="@drawable/ic_assignment_black_24dp"
             android:drawableLeft="@drawable/ic_assignment_black_24dp"
-            android:text="운영진 소개"
+            android:text=" 운영진 소개"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
@@ -138,14 +138,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="소프트웨어학부 14학번"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/colorPrimaryDark"
                             android:textSize="15dp"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="k0s3y0@naver.com"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/colorPrimaryDark"
                             android:textSize="15dp"/>
                     </LinearLayout>
 

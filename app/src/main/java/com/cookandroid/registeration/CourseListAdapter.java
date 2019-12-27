@@ -134,7 +134,8 @@ public class CourseListAdapter extends BaseAdapter {
                             .setPositiveButton("다시 시도", null)
                             .create();
                     dialog.show();
-                } else {
+                }
+                else {
                     Response.Listener<String> responseListener = new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {

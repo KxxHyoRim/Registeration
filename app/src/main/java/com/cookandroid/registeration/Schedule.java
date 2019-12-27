@@ -7,7 +7,7 @@ public class Schedule {
 
     private String monday[]=new String[14];
     private String tuesday[]=new String[14];
-    private String wendnesday[]=new String[14];
+    private String wednesday[]=new String[14];
     private String thursday[]=new String[14];
     private String friday[]=new String[14];
 
@@ -15,7 +15,7 @@ public class Schedule {
         for(int i=0; i<14; i++){
             monday[i]="";
             tuesday[i]="";
-            wendnesday[i]="";
+            wednesday[i]="";
             thursday[i]="";
             friday[i]="";
 
@@ -75,7 +75,7 @@ public class Schedule {
                 if(scheduleText.charAt(i)==']')
                 {
                     endPoint=i;
-                    wendnesday[Integer.parseInt(scheduleText.substring(startPoint+1,endPoint))]="수업";
+                    wednesday[Integer.parseInt(scheduleText.substring(startPoint+1,endPoint))]="수업";
                 }
             }
         }
@@ -178,7 +178,7 @@ public class Schedule {
                 if(scheduleText.charAt(i)==']')
                 {
                     endPoint=i;
-                    if(!wendnesday[Integer.parseInt(scheduleText.substring(startPoint+1,endPoint))].equals(""))
+                    if(!wednesday[Integer.parseInt(scheduleText.substring(startPoint+1,endPoint))].equals(""))
                     {
                         return false;
                     }
@@ -289,7 +289,7 @@ public class Schedule {
                 if(scheduleText.charAt(i)==']')
                 {
                     endPoint=i;
-                    wendnesday[Integer.parseInt(scheduleText.substring(startPoint+1,endPoint))]=courseTitle+professor;
+                    wednesday[Integer.parseInt(scheduleText.substring(startPoint+1,endPoint))]=courseTitle+professor;
                 }
             }
         }
@@ -332,7 +332,7 @@ public class Schedule {
     }
 
 
-    public void setting(AutoResizeTextView[] monday ,AutoResizeTextView[] tuesday, AutoResizeTextView[] wendnesday, AutoResizeTextView[] thursday, AutoResizeTextView[] friday, Context context)
+    public void setting(AutoResizeTextView[] monday ,AutoResizeTextView[] tuesday, AutoResizeTextView[] wednesday, AutoResizeTextView[] thursday, AutoResizeTextView[] friday, Context context)
     {
         int maxLength=0;
         String maxString="";
@@ -346,9 +346,9 @@ public class Schedule {
                 maxLength=this.tuesday[i].length();
                 maxString=this.tuesday[i];
             }
-            if(this.wendnesday[i].length()>maxLength){
-                maxLength=this.wendnesday[i].length();
-                maxString=this.wendnesday[i];
+            if(this.wednesday[i].length()>maxLength){
+                maxLength=this.wednesday[i].length();
+                maxString=this.wednesday[i];
             }
             if(this.thursday[i].length()>maxLength){
                 maxLength=this.thursday[i].length();
@@ -359,6 +359,7 @@ public class Schedule {
                 maxString=this.friday[i];
             }
         }
+
         for(int i=0; i<14; i++){
             if(!this.monday[i].equals(""))
             {
@@ -378,14 +379,14 @@ public class Schedule {
             {
                 tuesday[i].setText(maxString);
             }
-            if(!this.wendnesday[i].equals(""))
+            if(!this.wednesday[i].equals(""))
             {
-                wendnesday[i].setText(this.wendnesday[i]);
-                wendnesday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+                wednesday[i].setText(this.wednesday[i]);
+                wednesday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
             }
             else
             {
-                wendnesday[i].setText(maxString);
+                wednesday[i].setText(maxString);
             }
             if(!this.thursday[i].equals(""))
             {
@@ -408,7 +409,7 @@ public class Schedule {
 
             monday[i].setSingleLine();
             tuesday[i].setSingleLine();
-            wendnesday[i].setSingleLine();
+            wednesday[i].setSingleLine();
             thursday[i].setSingleLine();
             friday[i].setSingleLine();
         }

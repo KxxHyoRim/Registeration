@@ -1,10 +1,14 @@
 package com.cookandroid.registeration;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
 import android.renderscript.ScriptGroup;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +16,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.astuetz.PagerSlidingTabStrip;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -39,14 +45,17 @@ public class MainActivity extends AppCompatActivity {
 
         userID=getIntent().getStringExtra("userID");
 
+
         noticeListView=(ListView) findViewById(R.id.noticeListView);
         noticeList = new ArrayList<Notice>();
         adapter = new NoticeListAdapter(getApplicationContext(), noticeList);
         noticeListView.setAdapter(adapter);
 
+
         final Button courseButton=(Button) findViewById(R.id.courseButton);
         final Button statisticButton=(Button) findViewById(R.id.statisticButton);
-        final Button scheduleButton=(Button) findViewById(R.id.shceduleButton);
+        final Button scheduleButton=(Button) findViewById(R.id.scheduleButton);
+        final Button logoutButton=(Button)findViewById(R.id.logoutButton);
         final LinearLayout notice=(LinearLayout)findViewById(R.id.notice);
 
         courseButton.setOnClickListener(new View.OnClickListener() {
@@ -91,6 +100,27 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment, new ScheduleFragment());
                 fragmentTransaction.commit();
+            }
+        });
+
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("로그아웃").setMessage("로그아웃 하시겠습니까?")
+                        .setPositiveButton("로그아웃", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                                startActivity(intent);
+                            }
+                        })
+                        .setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+
+                            }
+                        })
+                        .show();
             }
         });
 

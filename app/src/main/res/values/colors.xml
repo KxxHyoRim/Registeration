@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#000000</color>
-    <color name="colorPrimaryDark">#FFE400</color>
-    <color name="colorAccent">#BF4456</color>
+    <color name="colorPrimary">#B3C8F2</color>
+    <color name="colorPrimaryDark">#4F5873</color>
+    <color name="colorAccent">#F26B83</color>
     <color name="colorWarning">#CC3D3D</color>
     <color name="colorGray">#8C8C8C</color>
-    <color name="colorDanger">#008299</color>
-    <color name="colorRed">#FF1212</color>
-    <color name="colorSafe">#1DDb16</color>
-    <color name="colorWinner">#5F00FF</color>
-    <color name="colorBackground">#C6E8FF</color>
+    <color name="colorDanger">#FF5873</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorSafe">#69BFBF</color>
+    <color name="colorWinner">#FFD9D8</color>
+    <color name="colorBackground">#F2EAE4</color>
+    <color name="psts_background_tab_pressed">#1AFFFFFF</color>
+    <color name="psts_background_tab_pressed_ripple">#AAFFFFFF</color>
 </resources>
